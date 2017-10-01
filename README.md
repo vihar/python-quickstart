@@ -365,9 +365,9 @@ Syntactically,
 def function_name(formal parameters):
     statement(s)
 ```
-Note: Declaring a function doesn't run the function. In order to run, you have to call the function using the function name. 
+**Note**: Declaring a function doesn't run the function. In order to run, you have to call the function using the function name. 
 
-Example
+##### Example
 ```python
 greet.py
 
@@ -527,8 +527,9 @@ a.withdraw(10)
 
 ## Python3 Part 3
 
-Errors and Exception 
+### Errors and Exception 
 The most common perspective in Python is that it handles all errors with exceptions.
+
 An exception is a signal that an error or other unusual condition has occurred.There are several built-in exceptions, which indicates certain conditions like IndentationError: unexpected indent, ZeroDivisionError: division by zero. You can also define your exceptions.
 
 Programs are very sensitive. It would be nice if the code always returns a valid result, but sometimes a valid result cannot be calculated.
@@ -536,56 +537,53 @@ Programs are very sensitive. It would be nice if the code always returns a valid
 For Example it is not possible to divide a number by zero or to access the third element in a negative item list. 
 
 Until now error messages haven’t been more than mentioned, but if you have tried out the examples you have probably seen some. There are (at least) two distinguishable kinds of errors: 
-Syntax errors
-Exceptions
+- Syntax errors
+- Exceptions
 
-Syntax Errors
+###### Syntax Errors
 
 Syntax errors, also known as parsing errors, are perhaps the most common kind of complaint you get while you are still learning Python.Syntax errors are almost always fatal, i.e. there is almost never a way to successfully execute a piece of code containing syntax errors.
 
-Example
-
-	>>> print("Hello
- 	 File "<stdin>", line 1
-    	print("Hello
-              	      ^
+##### Example
+```python
+>>> print("Hello
+  File "<stdin>", line 1
+    print("Hello
+               ^
 SyntaxError: EOL while scanning string literal
-	
+```	
 The error is caused by the token preceding the arrow.In this example the error is detected at print() function as the parentheses is not closed.
-
-	
-	>>> while True print("Hello World !")
+```python
+>>> while True print("Hello World !")
   File "<stdin>", line 1
     	while True print("Hello World !")
                    	    ^
 SyntaxError: invalid syntax
-
+```
 Since a colon ‘ : ’ is missing after the condition of while loop it encountered a syntax error.
 
-
-Exceptions
+###### Exceptions
 
 Exceptions occur when exceptional situations occur in your program. For Example, what if you are going to read a file that doesn't exists or what if you accidentally deleted it when the program is running. Such situations are handled using exceptions.
 
 Similarly, what if your program had some invalid statements ?
 This is handled by Python which conveys you that there is an error.
 
-Example : Consider a simple print function call. What if we misspelt the word print as Print ?
+##### Example : 
+Consider a simple print function call. What if we misspelt the word print as Print ?
 Note the capitalization here. In this case, Python raises a syntax error.
-
-	>>> Print("Hello there !")
+```python
+>>> Print("Hello there !")
 Traceback (most recent call last):
  File "<stdin>", line 1, in <module>
 NameError: name 'Print' is not defined
+```
+Observe that a NameError is raised and also the location where the error was detected is printed.
 
-Observer that a NameError is raised and also the location where the error was detected is printed.
-
-
-	
 Now let's see few types errors in Python
 
-ZeroDivisionError : When a number is divided by zero.
-
+**ZeroDivisionError :** When a number is divided by zero.
+```python
 >>> 2/0
 Traceback (most recent call last):
   	File "<stdin>", line 1, in <module>
@@ -593,43 +591,43 @@ ZeroDivisionError: division by zero
  
 IndexError : When the index is out of range.
 
-	>>> list = [1,2,3]
+>>> list = [1,2,3]
 >>> list[4]
 Traceback (most recent call last):
   	File "<stdin>", line 1, in <module>
 IndexError: list index out of range
 
 TypeError : Raised when an operation or function is applied to an object of inappropriate type
-	>>> '2' + 2
+>>> '2' + 2
 Traceback (most recent call last):
  	File "<stdin>", line 1, in <module>
 TypeError: must be str, not int
 
 KeyError :  It occurs when a dictionary is incorrectly used.
 
-	>>> dict = {'a' : 'Stark', 'b': 'Steve'}
+>>> dict = {'a' : 'Stark', 'b': 'Steve'}
 >>> dict['c']
 Traceback (most recent call last):
  File "<stdin>", line 1, in <module>
 KeyError: 'c'
-
-Exceptional Handling
+```
+### Exceptional Handling
 
 Like many other programming languages, Python has exception handling. We can handle the exceptions using the try except statement. We basically put our usual statements within the try-block and keep all our error handlers in the except block.
 
-Example: 
-
+##### Example: 
+```python
 try:
     print(1 / 0)
 except ZeroDivisionError:
     print("You can't divide by zero.")
-
-Catching Specific Exceptions in Python
+```
+###### Catching Specific Exceptions in Python
 
 A try clause can have any number of except clause to handle them differently but only one will be executed in case an exception occurs.
 
 We can use a tuple of values to specify multiple exceptions in an except clause. Here is an example pseudo code.
-
+```python
 try:
    # do something
    pass
@@ -646,58 +644,54 @@ except (TypeError, ZeroDivisionError):
 except:
    # handle all other exceptions
    pass
+```
 
-
-
-Raising Exceptions
+###### Raising Exceptions
 
 In Python programming, exceptions are raised when corresponding errors occur at run time, but we can forcefully raise it using the keyword raise.
-
+```python
 >>> raise KeyboardInterrupt
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 KeyboardInterrupt
 >>> 
-
 >>> raise MemoryError("Argument")
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 MemoryError: Argument
-
+```
 raising_error.py
-
+```python
 try:
     a = int(input("Enter a negative integer: "))
     if a >= 0:
         raise ValueError("That is not a negative number!")
 except ValueError as ve:
     print(ve)
-
+```
+```python
 python3 raising_error.py
-
 Enter a negative integer: 4
 That is not a negative number!
-
-try...finally
+```
+### try...finally
 
 The try statement in Python can have an optional finally clause. This clause is executed no matter what, and is generally used to release external resources.
 
-
-
-
 file_handling.py
-
+```python
 try:
     f = open("test.txt", encoding='utf-8')
     # perform file operations
 finally:
     f.close()
-
+```
+```python
 python3 file_handling.py
+```
+### Modules and Packages
 
-Modules and Packages
-
-Modules
+###### Modules
 
 Python comes with hundred of modules that do all sort of things. There are also third party modules that are available for download from internet.
 
@@ -705,12 +699,12 @@ Python includes a set of modules called the standard library, for example math, 
 
 A module is imported using the import statement.
 
-Example :
-
+##### Example :
+```python
 Import module_name
-
+```
 Let’s now import few modules and run functions in them
-
+```python
 >>> import math
 >>> math.pi
 3.141592653589793
@@ -718,29 +712,24 @@ Let’s now import few modules and run functions in them
 0.0
 >>> math.cos(45)
 0.5253219888177297
-
 >>> import time
 >>> print(time.asctime())
 Thu Jul 27 01:47:01 2017
-
+```
 In this example we have imported time module and called asctime function from that module, which returns the current time as a String.
 
-
-
-
-
 There is another way to import to use import statement.
-
+```python
 >>> from time import asctime
 >>> asctime()
 'Thu Jul 27 01:49:10 2017'
-
+```
 Here, we have imported just the asctime function from the time module.
 
-Packages
+###### Packages
 
 Consider a sound package, the way organize your python code creates awesome packages.
-
+```python
 sound/                          Top-level package
       __init__.py               Initialize the sound package
       formats/                  Subpackage for file format conversions
@@ -761,15 +750,12 @@ sound/                          Top-level package
               vocoder.py
               karaoke.py
               ...
+```
 
-
-Third party packages.
-Python has got the greatest community for creating python packages. There are more than 1,00,000 packages available at https://pypi.python.org/pypi
+###### Third party packages
+Python has got the greatest community for creating python packages. There are more than 1,00,000 packages available at [https://pypi.python.org/pypi]
 
 Python package is a collection of all modules connected properly into one form and distributed PyPi, The Python Package Index maintains the list of Python packages available. Now when you are done with pip setup Go to command prompt or terminal and say
-
+```python
 pip install <package-name>
-
-
-
-
+```

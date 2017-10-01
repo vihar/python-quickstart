@@ -41,7 +41,7 @@ hello_world.py
 ```python
 print(“Hello World !”)
 ```
-```
+```python
 $python3 hello_world.py
 Hello World !
 ```
@@ -54,7 +54,7 @@ Python shell can be used as a calculator, you can perform basic mathematical ope
 
 ##### Example:
 
-```
+```python
 >>>3 + 3
 6
 >>>(84949*292)/322
@@ -63,7 +63,7 @@ Python shell can be used as a calculator, you can perform basic mathematical ope
 ```
 In python we have three distinct number types they are integers, floating point numbers, and complex numbers. Integers are numbers with no fractional part they can be either positive or negative or unsigned(zero).Float values are numbers with fractional part.
 
-In programming, a variable is nothing more than a name for something.Variable names are case sensitive.
+In programming, a variable is nothing more than a name for something. Variable names are case sensitive.
 
 To declare a variable in Python you have to give its name followed by an equal sign and the initialization value.
 ```python
@@ -74,15 +74,12 @@ pi = 3.14
 When you keep assigning the values to the same variable name Python simply replaces the older value with newer value.
 
 Python3 supports the following data types:
-Boolean
-Integer
-Float
-Complex
-String
-
-
-
-```
+1. Boolean
+2. Integer
+3. Float
+4. Complex
+5. String
+```python
 fuel = True
 speed = 167
 miles = 153.5
@@ -97,28 +94,24 @@ print(miles, type(miles))
 print(location, type(location))
 print(car, type(car))
 ```
-
-
-
-
 Note : Never start a variable name with digit.
 
-
-Data Structures 
+### Data Structures 
 To organize and process data in memory efficiently we use data structures, In Python we have different types data structures and several operations to perform on them.
 
 Now we will discuss about three main data structures in Python
-Lists 
+
+##### Lists 
 Lists are ordered,mutable sequence of values,these are similar to arrays in C and C++.
 
 To declare a list in python we give the list name assigned to values separated by commas.
-
+```python
 my_list = [“item_1”, ”item_2”, ”item_3”, ”item_4”]
-
+```
 Similar to string indices, list indices start at 0, and lists can be sliced, concatenated and so on.
 
-Example:
-
+##### Example:
+```python
 world_tour = [“Paris”, “New York”, “Melbourne”, “Swiss”]
 
 print(type(world_tour))
@@ -126,53 +119,53 @@ print(world_tour)
 print(world_tour[0])
 print(world_tour[1])
 print(world_tour[-1])
-
+```
 Note: Negative indices starts from the end of the list with index value -1.
 
 We have several methods on lists here are few examples
-
+```python
 stationery_list = ["Pen", "Pencil", "Notepad"]
 stationery_list.append("Eraser")
 # Adds new item at the end of the list
 print(stationery_list)
 stationery_list.insert(2, "Files")
-"""
-Insert method inserts a single element into a list.It takes two arguments one is 
+```
+Insert method inserts a single element into a list. It takes two arguments one is 
 the numerical index at which the data is to be inserted and the other is value.
-"""
+```python
 print(stationery_list)
 stationery_list.index(“Pen”)
-“””
+```
 The index method finds the given value in list and returns the index value. Generally index method is used to search where the values are incurred.
-“””
+
 These are few examples of list methods, to find out more we can use help(list) for all the list methods.
 
-Tuples
+##### Tuples
 
 Lists are ordered,immutable sequence of values.
 
 Declaring tuples is similar to tuples we just enclose the values in pair of parentheses.
-
+```python
 my_tuple = (item_1, item_2, item_3)
-
+```
 Tuples are immutable which means we cannot add or delete items in the tuple, and also tuples have no index methods.
 
 Why use tuples ?
 Tuples are faster than lists and safer.
 Tuples are write -protected we cannot add new items once the declaration is done.
- 
+ ```python
 atmosphere = (“Oxygen”, “Hydrogen”, “Nitrogen”)
 print(type(atmosphere))
-
-Dictionary
+```
+##### Dictionary
 Dictionaries are unordered set key-value pairs.The key and the value can be of different data types.Each value has a unique key which acts as an identifier for that value within the dictionary.
 
 Defining a dictionary
-
+```python
 my_dictionary = {‘key_1’ : ’value1’, ‘key_2’ : ‘value2’ , ‘key_3’ : ’value3’} 
-
-Example:
-
+```
+##### Example:
+```python
 code_name = { 'jack': 4098, 'sape': 4139, ‘robb’:2323}
 print(type(code_name))
 print(code_name)
@@ -186,43 +179,48 @@ code_name[‘jack’] = 1212
 
 # The len function returns the number of key-value pairs in the dictionary.
 len(code_name)
+```
 
-Conditionals(if, elif, else)
+### Conditionals (if, elif, else)
 We always need the ability to check the conditions and change the behaviour of the program accordingly. The conditional statements give us the ability, the simplest form is the ‘if’ statement.
 
 A conditional statement tests an expression to see whether it is true or false and it does the operations based on the result.
-
+```python
 if expression:
    statement(s)
- Note : Python must know the number of statements which must be executed when condition happens to be True.To enable this the concept of indentation occurs.All the statements below the header (if in this case) must maintain same level of indentation(4 spaces).
+```   
+ **Note** : Python must know the number of statements which must be executed when condition happens to be True. To enable this the concept of indentation occurs. All the statements below the header (if in this case) must maintain same level of indentation(4 spaces).
 
 This concept of indentation is applied throughout Python programs.
 
-Example:
+##### Example:
 temp.py
-
+```python
 temperature  = 27
 If temperature <=30:
 	print(“Let's go to the party!”)
-
+```
+```python
 python3 temp.py
 Let's go to the party!
+```
+If there are two possibilities of conditions then we use **if, else statement**.
 
-If there are two possibilities of conditions then we use if, else statement.
-
-Example:
+##### Example:
 movie_plan.py
-
+```python
 movie_tickets = 4
 if(movie_tickets >= 4):
 	print(“Tickets are available, Let’s go to the movie.”)
 else:
 	print(“Let's have a drink, tickets are not available. ”)
-
+```
+```python
 python3 movie_plan.py
-
-Multiple conditions
-If we have more than two possibilities and we need more than two branches. SO we use chained conditional statements. The term elif is abbreviation of else if.There is no limit of elif statements, but the last branch has to be an else statement.
+```
+##### Multiple conditions
+If we have more than two possibilities and we need more than two branches. So we use chained conditional statements. The term elif is abbreviation of else if.There is no limit of elif statements, but the last branch has to be an else statement.
+```python
 weight = float(input("Enter your weight in Kg"))
 height = float(input("Enter your height in Cms"))
 
@@ -237,80 +235,71 @@ elif 25.00 <= bmi <= 30.00:
     print("Overweight")
 elif bmi > 30.00:
     print("Obese")
+```
+## Part 2
 
-
-
-Part 2
-
-Strings
+### Strings
 In python string is a sequence of characters enclosed in either single or double quotes.
 Strings are immutable sequence of Unicode points.
 Creating strings in python
-Example:
-	name = 'Stark'
+##### Example:
+```python
+name = 'Stark'
 job = "CEO at Queen’s Consolidate"
 print(type(name))
 print(type(job))
 print(name, ",", job)
+```
 
+### Python Formatting
 
-
-
-Python Formatting
-
-Using .format()
+##### Using .format()
 
 Sometimes we may want to construct strings with the value of the variable and this conceptual construction of strings is called string interpolation.
 
-Example :
-
+##### Example :
 formatting.py
-
+```python
 name = "Agent 47"
 code_number = 1011010
 message = "Hey {}, your code number is {}.".format(name, code_number)
 print(message)
-
-
-
-
-
-
-
-Control Flow
-For-loop: 
+```
+### Control Flow
+##### For-loop: 
 The for loop in in Python has the ability to iterate over items of any sequence such as list or string.
 
 It steps through the items in any ordered sequence i.e, String, List, Tuples, the keys of dictionaries and other iterable terms. The python for loop starts with a keyword for followed by a variable attribute, which will hold the values of the following sequence object, which is stepped through.
 
-Syntax of for loop
+###### Syntax of for loop
+```python
 	for variable in sequence:
 		statements
-Example:
+```
+##### Example:
 colors.py
-
+```python
 colors = ['Red', 'Black', 'Blue', 'White', 'Pink']
 
 for color in colors:
     print(color)
-
-python3 colors.py
 ```
+```python
+python3 colors.py
 Red
 Black
 Blue
 White
 Pink
 ```
-
 5_table.py
+```python
 	for index in [1, 2, 3, 4, 5]:
 		print(“{} times 5 is {}”.format(index, index*5))
-
-In this case, we just print the value in the block of statements.
-
-python3 5_table.py
 ```
+In this case, we just print the value in the block of statements.
+```
+python3 5_table.py
 1 times 5 is 5
 2 times 5 is 10
 3 times 5 is 15

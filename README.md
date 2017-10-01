@@ -273,7 +273,7 @@ It steps through the items in any ordered sequence i.e, String, List, Tuples, th
 
 ###### Syntax of for loop
 ```python
-	for variable in sequence:
+for variable in sequence:
 		statements
 ```
 ##### Example:
@@ -294,8 +294,8 @@ Pink
 ```
 5_table.py
 ```python
-	for index in [1, 2, 3, 4, 5]:
-		print(“{} times 5 is {}”.format(index, index*5))
+for index in [1, 2, 3, 4, 5]:
+    print(“{} times 5 is {}”.format(index, index*5))
 ```
 In this case, we just print the value in the block of statements.
 ```
@@ -306,56 +306,56 @@ python3 5_table.py
 4 times 5 is 20
 5 times 5 is 25
 ```
-
-While Loop
+##### While Loop
 A while loop statement in Python programming language repeatedly executes a target statement as long as the given condition is true. Unlike the for loop, the while loop will not run n times, but until a defined condition is met.
 
-Syntax of While loop
-
+###### Syntax of While loop
+```python
 while condition:
 	statement(s)
-
-Example:
-	
+```
+##### Example:
 countdown_timer.py
-	
-	flag = 10
-    while 0 < flag:
+```python	
+flag = 10
+while 0 < flag:
    	        print(flag)
    	        flag = flag - 1
 print("Go !!")
-
-The Range Function
+```
+##### The Range Function
 
 The range function in Python generates a list of numbers, which can be used to iterate over for loops and in other few cases.
 
 Now let’s see how range function works
-```
+```python
 range(n)
 range(begin, end)
 ```
 range(n) generates, the integer numbers starting with 1 and ending with (n-1).
 range(begin, end) generates the integer numbers starting with begin and ending with end-1.
-
+```python
 $python3
 …
 ...
 >>> range(8)
 range(0, 8)
-
-Example: Printing the squares of numbers iterating by range function. 
+```
+##### Example: 
+Printing the squares of numbers iterating by range function. 
 
 square.py
-
+```python
 for number in range(1, 7):
     square = number * number
     print(square)
-Functions
+```    
+### Functions
 Function is a block of reusable code that performs a specific task. It is a small unit of computation which may take arguments and may return values.
 
-Note: Function body must be indented like ‘if’ statement.
+**Note:** Function body must be indented like ‘if’ statement.
 
-Declaring a function
+###### Declaring a function
 
 The keyword def introduces a function definition followed by the function name and the parenthesized list of formal parameters. The statements that form the body of the function start at the next line and must be indented.
 
@@ -376,40 +376,36 @@ def greet():
     print("Hello ! Welcome to the party.")
 # calling the function.
 
-
 greet()
 ```
-
+```python
 python3 greet.py
 Hello ! Welcome to the party.
-
+```
 In this program we created a function named greet with no parameters such as empty parenthesis. The function is defined to print a string called “Hello ! Welcome to the party.”
 So calling the function just prints the given string.
 
-Functions with parameters.
+###### Functions with parameters:
 A function can take parameters which are values you supply to the function so that the function can do something utilizing those. Parameters are specified within the pair of parentheses in the function definition separated by commas.
 
-Example:
-
+##### Example:
 greet_names.py
-
+```python
 def greet_name(name):
     print("Hello {}".format(name))
-
 
 greet_name("Flash")
 greet_name("Arrow")
 greet_name("Bat")
-
+```
+```python
 python3 greet_names.py
-
 Hello Flash
 Hello Arrow
 Hello Bat
-
-
+```
 factorial.py
-
+```python
 def num_factorial(num):
     factorial = 1
 
@@ -423,38 +419,39 @@ def num_factorial(num):
         print("The factorial of", num, "is", factorial)
 
 num_factorial(5)
-
+```
+```python
 python3 factorial.py
 The factorial of 5 is 120
+```
+### Recursion, Scope of a Variable.
 
-# Recursion, Scope of a Variable.
-
-
-Introduction to Object Oriented Python
+### Introduction to Object Oriented Python
 
 In all the programs we wrote till now, we have designed our program around functions i.e. blocks of statements which manipulate data. This is called the procedure-oriented way of programming. There is another way of organizing your program which is to combine data and functionality and wrap it inside something called a class. This is called the object oriented programming paradigm.
 
 A quick glance at the basics of the Object Orientation terminology.
-class : A class is the blueprint from which individual objects are created. 
-Object : A real World entity which have state and behavior.
+**Class** : A class is the blueprint from which individual objects are created. 
+**Object** : A real World entity which have state and behavior.
 Let's create a class Person with a class method say in the class.
+```python
 class Person():
     def say(self):
         print("Hello")
-
+```
 Now let's create an object instance for the class.
-
+```python
 class Person():
     def say(self):
         print("Hello")
 
 jackman = Person()
 jackman.say()
-
+```
 Extending the plot further lets us create two methods, hello and bye that take arguments.
 
 methods_examples.py
-
+```python
 class Person():
 
     def hello(self, name):
@@ -465,26 +462,25 @@ class Person():
         self.name = name
         print("Nice Meeting You {}".format(self.name))
 
-
 jackman = Person()
 jackman.hello("Lee")
 jackman.bye("Edison")
-
+```
+```python
 python3 method_examples.py
-
 Hello lee How are you ?
 Nice Meeting You edison
-
-
-Note:Self is a default argument for all instance method
+```
+**Note**:Self is a default argument for all instance method
 This needs us to repeat the instance variable for every class method instead of creating an object with the instance variables. It's now time to work with constructors.
-Constructors
 
+### Constructors
 Constructors in Python are written under a special method __init__.
 
 Now let us write a constructor for an object. In this, example let's create an object with instance variables name and year_of_birth.This process of writing a constructor in a class eliminates the repeating of the instance variables for every instance method.
 
 constructors.py 
+```python
 class Person():
     def __init__(self, name, year_of_birth):
 
@@ -501,15 +497,14 @@ class Person():
 person = Person('Vihar', 1998)
 person.detail('Vihar')
 person.age(19)
-
+```
+```python
 python3 constructors.py 
-
 Name of the person is Vihar
 Your are 19 Years Old
-
-
-Classes and Objects Example :
-
+```
+##### Classes and Objects Example :
+```python
 class BankAccount:
     def __init__(self):
         self.balance = 0
@@ -522,17 +517,15 @@ class BankAccount:
         self.balance += amount
         return print(self.balance)
 
-
 a = BankAccount()
 b = BankAccount()
 a.deposit(100)
 b.deposit(50)
 b.withdraw(10)
 a.withdraw(10)
+```
 
-
-
-Python3 Part 3
+## Python3 Part 3
 
 Errors and Exception 
 The most common perspective in Python is that it handles all errors with exceptions.

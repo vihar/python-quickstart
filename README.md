@@ -2,29 +2,23 @@
 
 ### About Python
 
-# Python 3
-
-### About Python
-
 Python 3.0 also known as Python 3000 is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.
 
-Installing Python 3
+### Installing Python 3
 
-The first program
+##### The first program
 Let's write our first program to, print “Hello World !”
 
 In python we use print(“”) function to display text on the screen.
-
-We use quotations marks for beginning and end of the string, the don't appear in the result.
+We use quotations marks for beginning and end of the string, they don't appear in the result.
 ```python
 print(“Hello World !”)
 ```
 In two ways we can run python program
-Python Shell
-Python Script
+- Python Shell
+- Python Script
 
-
-Using Python Shell
+### Using Python Shell
 
 After installing Python on your machine, to open the python shell type in “python3” in your command prompt or terminal, this will begin an interactive python session.This interactive session doesn't save any of your code in a file, it expires as soon as you exit from the shell.
 
@@ -36,37 +30,34 @@ Hello World !
 ```
 As soon as you hit enter the python interpreter runs the code and gives the output.
 
-General python shell is used to test programs on the go.help(anything) for documentation. It's way faster than any web interface.
+General python shell is used to test programs on the go, help(anything) for documentation. It's way faster than any web interface.
 
-
-
-
-Executing Python Script
+### Executing Python Script
 
 To run python scripts save your python code in .py file and in your command prompt or terminal use python3 file_name.py to execute the program.
 
-
-Example:
+##### Example:
 hello_world.py
-```
+```python
 print(“Hello World !”)
+```
 ```
 $python3 hello_world.py
 Hello World !
-
+```
 Make sure you change the directory where you saved the file before doing it.
 
 When you are writing large pieces of Python code then we need to use Script Mode.
 
 You can use different text editors for writing python scripts such as Sublime Text ,Atom Editor.
 
-
-Number and Variables
+### Number and Variables
 As we know numbers are everywhere, so let’s see how Python deals with numbers.
 
 Python shell can be used as a calculator, you can perform basic mathematical operation in python shell such as addition, division etc.
 
-Example:
+##### Example:
+
 ```
 >>>3 + 3
 6
@@ -76,19 +67,12 @@ Example:
 ```
 In python we have three distinct number types they are integers, floating point numbers, and complex numbers. Integers are numbers with no fractional part they can be either positive or negative or unsigned(zero).Float values are numbers with fractional part.
 
-
-
-
-
-
 In programming, a variable is nothing more than a name for something.Variable names are case sensitive.
 
 To declare a variable in Python you have to give its name followed by an equal sign and the initialization value.
-```
+```python
 var_name = value
-
 myname = “Stark”
-
 pi = 3.14 
 ```
 When you keep assigning the values to the same variable name Python simply replaces the older value with newer value.

@@ -471,7 +471,7 @@ python3 method_examples.py
 Hello lee How are you ?
 Nice Meeting You edison
 ```
-**Note**:Self is a default argument for all instance method
+**Note**: Self is a default argument for all instance method
 This needs us to repeat the instance variable for every class method instead of creating an object with the instance variables. It's now time to work with constructors.
 
 ### Constructors

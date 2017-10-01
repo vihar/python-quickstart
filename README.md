@@ -23,7 +23,7 @@ In two ways we can run python program
 After installing Python on your machine, to open the python shell type in “python3” in your command prompt or terminal, this will begin an interactive python session.This interactive session doesn't save any of your code in a file, it expires as soon as you exit from the shell.
 
 In your python shell, you will find the current running version of your python,some information and three arrows waiting for your command. Now lets write the code to print Hello World in the Python shell.
-```
+```python
 >>>print(“Hello World !”)
 Hello World !
 >>>
@@ -45,11 +45,7 @@ print(“Hello World !”)
 $python3 hello_world.py
 Hello World !
 ```
-Make sure you change the directory where you saved the file before doing it.
-
-When you are writing large pieces of Python code then we need to use Script Mode.
-
-You can use different text editors for writing python scripts such as Sublime Text ,Atom Editor.
+Make sure you change the directory where you saved the file before doing it. When you are writing large pieces of Python code then we need to use Script Mode. You can use different text editors for writing python scripts such as Sublime Text ,Atom Editor.
 
 ### Number and Variables
 As we know numbers are everywhere, so let’s see how Python deals with numbers.

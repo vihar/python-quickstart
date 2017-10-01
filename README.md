@@ -1,7 +1,11 @@
-Python 3
+﻿# Python 3
 
+### About Python
 
-About Python
+# Python 3
+
+### About Python
+
 Python 3.0 also known as Python 3000 is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.
 
 Installing Python 3
@@ -10,8 +14,9 @@ The first program
 Let's write our first program to, print “Hello World !”
 
 In python we use print(“”) function to display text on the screen.
+
 We use quotations marks for beginning and end of the string, the don't appear in the result.
-```
+```python
 print(“Hello World !”)
 ```
 In two ways we can run python program

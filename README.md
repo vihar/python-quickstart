@@ -252,7 +252,7 @@ elif 25.00 <= bmi <= 30.00:
     print("Overweight")
 elif bmi > 30.00:
     print("Obese")
-```
+
 
 
 Part 2
@@ -392,9 +392,9 @@ def function_name(formal parameters):
     statement(s)
 ```
 Note: Declaring a function doesn't run the function. In order to run, you have to call the function using the function name. 
-```
+
 Example
-```python3
+```python
 greet.py
 
 # Declaring a function.
@@ -405,7 +405,7 @@ def greet():
 
 greet()
 ```
-```
+
 python3 greet.py
 Hello ! Welcome to the party.
 
